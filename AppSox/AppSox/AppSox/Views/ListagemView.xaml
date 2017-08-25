@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppSox"
+             x:Class="AppSox.Views.ListagemView">
+
+  <!--  <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"  Text="Brasil"/>
+        <Label Grid.Row="1" Text="Argentina"/>
+        <Label Grid.Row="2" Text="Uruguai"/>
+    </Grid>
+-->
+
+   <!-- <Grid VerticalOptions="Start">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Text="Trump / Pence"/>
+        <Label Grid.Row="0" Grid.Column="1" Text="62.829.410"/>
+        <Label Grid.Row="0" Grid.Column="2" Text="46,10%"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Text="Clinton / Kaine"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="65.483.780"/>
+        <Label Grid.Row="1" Grid.Column="2" Text="48,05%"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Johnson / Weld"/>
+        <Label Grid.Row="2" Grid.Column="1" Text="4.476.220"/>
+        <Label Grid.Row="2" Grid.Column="2" Text="3,28%"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Text="Stein / Baraka"/>
+        <Label Grid.Row="3" Grid.Column="1" Text="1.449.726"/>
+        <Label Grid.Row="3" Grid.Column="2" Text="1,06%"/>
+
+
+
+
+    </Grid> -->
+
+   <!-- <StackLayout>
+        <Label Text="Azera V6" />
+        <Label Text="60000"/>
+        <Label Text="Fiesta 2.0"/>
+        <Label Text="50000"/>
+        <Label Text="HB20 S"/>
+        <Label Text="40000"/>
+        <Label Text="Dodge Charger Rt V8"/>
+        <Label Text="80000"/>
+        <Label Text="Ford Maverick 1976"/>
+        <Label Text="100000"/>
+        <Label Text="Ford Landau 1982"/>
+        <Label Text="60000"/>
+    </StackLayout>
+    -->
+   <!-- <Grid>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition> </RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Text="Azera V6"/>
+        <Label Grid.Row="0" Grid.Column="1" Text="60000"/>
+        <Label Grid.Row="1" Grid.Column="0" Text="Fiesta 2.0"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="50000"/>
+        <Label Grid.Row="2" Grid.Column="0" Text="HB20 S"/>
+        <Label Grid.Row="2" Grid.Column="1" Text="40000"/>
+        <Label Grid.Row="3" Grid.Column="0" Text="Dodge Charger Rt V8"/>
+        <Label Grid.Row="3" Grid.Column="1" Text="80000"/>
+        <Label Grid.Row="4" Grid.Column="0" Text="Ford Maverick 1976"/>
+        <Label Grid.Row="4" Grid.Column="1" Text="100000"/>
+        <Label Grid.Row="5" Grid.Column="0" Text="Ford Landau 1982"/>
+        <Label Grid.Row="5" Grid.Column="1" Text="60000"/>
+
+    </Grid>
+    -->
+    <ListView x:Name="ListViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="25" ItemTapped="ListViewVeiculos_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nome}" FontSize="20" VerticalOptions="Center"></Label>
+                            <Label Text=" - " VerticalOptions="Center"></Label>
+                            <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+</ContentPage>
